@@ -4,7 +4,7 @@ const burger = require("../models/burger.js");
 var router = express.Router();
 
 router.get("/", function(req, res) {
-  burger.getAll(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
 });
 
 router.get("/api/:burger_name", function(req, res) {
-  burger.getAll(function(data) {
+  burger.selectAll(function(data) {
     var hbsObject = {
       burgers: data
     };
